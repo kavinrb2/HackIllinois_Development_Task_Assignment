@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Output</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.4/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-96">
+        <!-- Placeholder for backend custom data output -->
+        <div id="customDataOutput" class="p-4 bg-gray-50 rounded-md text-gray-700">
+            <!-- Initial text -->
+            Loading custom data...
+        </div>
+
+        <!-- Go Back Button -->
+        <a href="index.html">
+            <button type="button" class="mt-4 py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-700">Go Back</button>
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('http://localhost:5000/get-custom-data')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("customDataOutput").textContent = data.customData;
+            })
+            .catch(error => {
+                console.error('Error fetching custom data:', error);
+                document.getElementById("customDataOutput").textContent = 
+                'Failed to load custom data.';
+            });
+        });
+    </script>
+</body>
+</html>

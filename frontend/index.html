@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Form Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.4/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-96">
+        <form id="userInputForm" class="flex flex-col space-y-4">
+            <div>
+                <label for="inputOne" class="block text-sm font-medium text-gray-700">Add developer and task info</label>
+                <input type="text" id="inputOne" name="inputOne" class="mt-1 p-2 w-full border rounded-md" placeholder="Enter dev info">
+            </div>
+
+            <div>
+                <label for="inputTwo" class="block text-sm font-medium text-gray-700">Task Info</label>
+                <input type="text" id="inputTwo" name="inputTwo" class="mt-1 p-2 w-full border rounded-md" placeholder="Enter task info">
+            </div>
+
+            <div id="output" class="p-4 bg-gray-50 rounded-md"></div>
+
+            <button type="submit" class="py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-700">Add</button>
+        </form>
+        
+       
+
+        <a href="output.html" target="_blank">
+            <button type="button" class="mt-4 py-2 px-4 bg-green-500 text-white rounded-md hover:bg-green-700">Manage task</button>
+        </a>
+
+        <!-- Added text and Visualize Current Database button -->
+        <p class="mt-4 text-sm font-medium text-gray-700">If you want to see current data:</p>
+<a href="data.html">
+    <button type="button" class="mt-2 py-2 px-4 bg-indigo-500 text-white rounded-md hover:bg-indigo-700">Visualize Current Database</button>
+</a>
+    </div>
+
+    <script>
+        document.getElementById("userInputForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            const inputOne = document.getElementById("inputOne").value;
+            const inputTwo = document.getElementById("inputTwo").value;
+            document.getElementById("output").textContent = `Added: ${inputOne}, ${inputTwo}`;
+            // If you want to include the project selection in the output, you can do so here.
+            // Since the "Select Project" input is outside the form, you'll need to handle it separately.
+        });
+    </script>
+</body>
+</html>
