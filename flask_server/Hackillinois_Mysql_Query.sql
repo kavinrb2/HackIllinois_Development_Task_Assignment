@@ -104,4 +104,8 @@ INSERT INTO Availability (employee_id, hours_available) VALUES
     
 CREATE USER 'aanyasd'@'%' IDENTIFIED BY 'hackillinois';
 GRANT ALL PRIVILEGES ON *.* TO 'aanyasd'@'%' WITH GRANT OPTION;
+<<<<<<< HEAD
 FLUSH PRIVILEGES;
+=======
+FLUSH PRIVILEGES;
+>>>>>>> 44339cee75ab18bc4a03132de361814b6835e138
