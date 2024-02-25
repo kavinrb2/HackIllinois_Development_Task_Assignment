@@ -6,6 +6,12 @@ Description: Description for Task 1
 Assigned Employee: John Doe
 Employee Email: john@example.com
 --------------------------
+Task ID: 1
+Task Name: Task 1
+Description: Description for Task 1
+Assigned Employee: John Doe
+Employee Email: john@example.com
+--------------------------
 Task ID: 2
 Task Name: Task 2
 Description: Description for Task 2
@@ -15,6 +21,12 @@ Employee Email: jane@example.com
 Task ID: 3
 Task Name: New Task
 Description: deploy new features
+Assigned Employee: Jane Smith
+Employee Email: jane@example.com
+--------------------------
+Task ID: 2
+Task Name: Task 2
+Description: Description for Task 2
 Assigned Employee: Jane Smith
 Employee Email: jane@example.com
 --------------------------
